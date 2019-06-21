@@ -40,6 +40,7 @@ const createCatalogItem = function (item) {
   let productsItem = product.cloneNode(true);
   productsItem.setAttribute('id', item.name);
   productsItem.querySelector('img').setAttribute('src', item.src);
+  productsItem.querySelector('img').setAttribute('alt', item.name);
   productsItem.querySelector('h3').textContent = item.name.toUpperCase();
   productsItem.querySelector('span').textContent = item.price + "$";
   return productsItem;
